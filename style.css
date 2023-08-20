@@ -90,7 +90,7 @@ img {
   color: #fff;
   background-color: #212a72;
   font-size: 0.7rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .repo:hover {
@@ -98,9 +98,15 @@ img {
 }
 
 #repos {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.name h2 {
+  font-size: 1.184rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -130,5 +136,9 @@ img {
 
   .name h2 {
     font-size: 1rem;
+  }
+
+  #repos {
+    grid-template-columns: 1fr;
   }
 }
